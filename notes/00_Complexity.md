@@ -21,6 +21,7 @@ Big-O notation is used to express time and space complexity of an algorithm and 
 
 **Python** 
 ~~~
+# Python code
 
 from typing import List
 
@@ -38,6 +39,8 @@ for number in numbers:
 
 **C++**
 ~~~
+
+// C++ code
 
 #include <iostream>
 using namespace std;
