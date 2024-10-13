@@ -24,11 +24,15 @@ Big-O notation is used to express time and space complexity of an algorithm and 
 
 from typing import List
 
+#Define a list of numbers to search through
+
 numbers: List[int] = [1, 8, 3, 2, 9]
 
+#Loop through each number in the list
+
 for number in numbers:
-    if number == 2:
-        print(number)
+    if number == 2:  # Check if the current number is the target
+        print(number)  # If found, print the number
 
 ~~~
 
@@ -36,18 +40,22 @@ for number in numbers:
 ~~~
 
 #include <iostream>
+using namespace std;
 
 int main() {
+    // Define an array of numbers to search through
     int numbers[5] = {1, 8, 3, 2, 9};
 
-    for (int i = 0; i < 5; i ++) {
-        if (numbers[i] == 2) {
-            std::cout << number << std::endl;
+    // Loop through each element in the array
+    for (int i = 0; i < 5; i++) {
+        if (numbers[i] == 2) {  // Check if the current element is the target
+            cout << numbers[i] << endl;  // If found, print the number
         }
     }
 
     return 0;
 }
+
 
 ~~~
 
