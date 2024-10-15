@@ -2,7 +2,7 @@
 
 **String** - sequence of characters stored in contiguous memory.
 
-```
+```cpp
 char word[] = "Hello, World";
 ```
 
