@@ -1,18 +1,22 @@
 # Arrays
+
 ---
 
-<p style="font-size: 20px; font-weight: 600;">Array is a linear data structure to store same-type elements sequentially.</p>
+## Array is a linear data structure to store same-type elements sequentially
 
 ### Example of array
-Python
-```
+
+#### Python
+
+```python
 from typing import List
 
 sample_list: List[int] = [1, 5, 2, 10]
 ```
 
-C++
-```
+#### C++
+
+```cpp
 int sampleList[4] = {1, 5, 2, 10};
 ```
 

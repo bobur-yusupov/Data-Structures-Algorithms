@@ -17,7 +17,7 @@ We use asymptotic notations to measure complexity of a data structure: **Big-O n
 
 Big-O notation is used to express time and space complexity of an algorithm and data structure. **Big-O notation** is upper bound or worst-case complexity, indicating the most amount of time or memory required by an algorithm to a given input size.
 
-#### Examples
+### Examples
 
 - O(n) means complexity is proportional to n
 - O(n^2) means complexity is proprotonal to n square
@@ -25,7 +25,7 @@ Big-O notation is used to express time and space complexity of an algorithm and 
 
 #### Code example to O(n). Simple Search
 
-**Python**
+#### Python
 
 ~~~python
 # Python code
@@ -44,9 +44,9 @@ for number in numbers:
 
 ~~~
 
-**C++**
+#### C++
 
-~~~
+~~~cpp
 
 // C++ code
 
@@ -78,7 +78,7 @@ The size of the input (size of `numbers` array) does not affect memory used by t
 
 In the example above, the array numbers has only 5 elements, which modern computers can process almost instantly. However, consider an array with millions, billions, or even trillions of elements. As the dataset grows, the time required to execute an operation increases significantly, and for certain algorithms, it can reach impractical lengths — hours, days, or even years.
 
-#### Why Complexity Matters
+### Why Complexity Matters
 
 As datasets expand, algorithm efficiency becomes crucial. An inefficient algorithm may run acceptably on small inputs, but on large inputs, it can become too slow or require excessive memory. When we talk about **Big-O**, we’re often considering scenarios like these, where we need algorithms that remain feasible as input sizes scale. Understanding complexity helps us select or design algorithms that handle large data efficiently, making them suitable for real-world applications, such as:
 
