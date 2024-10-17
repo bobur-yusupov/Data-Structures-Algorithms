@@ -28,6 +28,20 @@ class Node {
 }
 ```
 
+or
+
+```cpp
+struct Node {
+    int data;
+    Node* next;
+
+    Node (int data) {
+        this->data = data;
+        this->next = nullptr;
+    }
+}
+```
+
 `Node` will be stored in two slots of memory, one is for `val` and another for `next`.
 
 | val | next |
