@@ -115,3 +115,17 @@ bool searchElement(ListNode head, int target) {
 }
 
 ```
+
+We are giving example of code in two different languages. As you make noticed that in C++ we are using pointers, which point to the next node's memory location.
+
+Node 1
+
+| val | next (pointer to memory loc. of node 2) |
+|-----|------|
+
+Node 2
+
+| val | next (pointer to memory loc. of node 3) |
+|-----|------|
+
+Python uses reference instead of pointer. `next` refers to the next node.
