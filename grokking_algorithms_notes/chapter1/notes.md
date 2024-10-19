@@ -28,3 +28,13 @@ Let's dive deeper into binary search. How it actually works? Lets assume I need 
 Here you can find [Python](./binary_search1.py) example of binary search implementation.
 
 In the Python code I wrote a code which also checks the runtime of both methods, binary search and simple search. When I tried to find `53` it took `0.0003` in binary search and `0.0007` in iteration. It may does not make sense in a small projects but in systems with thousands of requests per second it shows its result.
+
+## Big-O notation in Binary Search
+
+Big-O notation is one of the three asymptotic notations, which basically concerns on worst-case runtime. For example, we are given an array with 100 elements and also a target. Target can be an element at the beginning or middle or at the end of the array. In Big-O notation we take the highest required resource. Resource is memory and time, in some cases disk usage also will be taken into account.
+
+Big-O annotation for time complexity of simple search is $$O(n)$$ and $$O(1)$$ space complexity as it use constant space.
+
+When it comes to **binary search** we will change it a little bit. Time complexity of the algorithm is $$O(logn)$$ logarithm with base 2.
+
+Each algorithm time complexity differs. In the python example aboce we only searched an element among 27 elements and it does not make sense at all. But in datasets with 1 billion records it takes even more time to complete the task for simple search while binary search can consume less time.
