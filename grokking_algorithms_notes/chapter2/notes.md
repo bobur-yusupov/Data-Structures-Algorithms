@@ -30,3 +30,32 @@ Which data structure to choose?
 We have to type of access to data: random and sequential. Sequential access means iterating through each element to until we reach to expected data.  We only can use sequential access in linked list to access data in a certain location. Because 3rd element can only and only be accessed by 2nd, 2nd by 1st. It is leading to O(3) time complexity. It leads to *O(n)* time complexity When it comes to array, we can easily access using element's index.
 
 We need to analyze the problem and know requirements and choose appropriate data structure.
+
+## Selection Sorting
+
+```python
+
+def smallestElement(arr: List[int]) -> int:
+    smallest = arr[0]
+    smallest_index = 0
+
+    for i in range(len(arr)):
+        if arr[i] < smallest:
+            smallest = arr[i]
+            smallest_index = i
+
+    return smallest_index
+
+
+def selectionSort(arr: List[int]) -> List[int]:
+    newArr = []
+
+    for i in range(len(arr)):
+        smallest = smallestElement(arr)
+        newArr.append(arr.pop(smallest))
+
+    return newArr
+
+```
+
+Here is the example of selection sorting algorithm. `smallestElement` function consumes $$O(n)$$ time complexity. As it is a helper function to find smallest element in each iteration. Iteration over `n` elements results to $$O(n)$$ time complexity. Finally selection sorting algorithm is consuming $$O(n^2)$$ time complexity.
