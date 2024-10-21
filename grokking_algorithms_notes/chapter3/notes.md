@@ -53,3 +53,99 @@ int main() {
 ```
 
 Here is C++ example. We can compare two languages. There is almost same logic. Only difference is in their syntax.
+
+## Base case and recursive case
+
+Recursion can run for entire life. For example let's say we are writing a program which countdown from **n** to 1using recursion.
+
+```python
+def count(n):
+    print(n)
+
+    count(n - 1)
+```
+
+```cpp
+#include <iostream>
+using namespace std;
+
+int count(int n) {
+    cout << n << endl;
+
+    return count(n - 1);
+}
+```
+
+Output
+
+```text
+n
+.
+.
+.
+3
+2
+1
+0
+-1
+-2
+-3
+...
+```
+
+However this program does not stop and runs for ever.
+
+We need **Base case** where we specify when recursion stops.
+
+Python
+
+```python
+def count(n):
+    # Base case
+    if (n==1):
+        print(1)
+        return
+
+    # Recursive case
+    else:
+        print(n)
+        return count(n-1)
+
+```
+
+C++
+
+```cpp
+#include <iostream>
+
+void count(int n) { 
+    if (n == 1) { // base case
+
+        std::cout << n << std::endl;
+    
+    } else { // recursive case
+
+        std::cout << n << std::endl; 
+        count(n - 1);
+    
+    }
+}
+
+int main() {
+    count(5);
+
+    return 0;
+}
+```
+
+Output
+
+```text
+5
+4
+3
+2
+1
+```
+
+here is the [C++ code](./base_case.cpp).
