@@ -59,3 +59,17 @@ def selectionSort(arr: List[int]) -> List[int]:
 ```
 
 Here is the example of selection sorting algorithm. `smallestElement` function consumes $$O(n)$$ time complexity. As it is a helper function to find smallest element in each iteration. Iteration over `n` elements results to $$O(n)$$ time complexity. Finally selection sorting algorithm is consuming $$O(n^2)$$ time complexity.
+
+## Stack
+
+Stack is a linear data structure which follows **LIFO** (Last In First Order). Simply a last inserted element into a list will go out first. We have to operations in stack: push (putting a new element) and pop(removing the topmost element).
+
+Let's imagine we have stack of plates. We take the topmost plate and use it and put back and again same cycle will be repeated.
+
+### Ket operations in stack
+
+1. **Push**: Adds an element to the top of the list
+2. **Pop**: Removes an element from the top of the list
+3. **Peek**: Returns the top element without removing it
+4. **IsEmpty**: Checks whether list is empty or not
+5. **IsFull**: Checks whether the stack is full in case of fixed-size array.
