@@ -1,9 +1,17 @@
-//{ Driver Code Starts
+/*
+
+Given an array, arr of n integers, and an integer element x, find whether element x is present in the array. 
+Return the index of the first occurrence of x in the array, or -1 if it doesn't exist.
+
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 
-
-// } Driver Code Ends
+/*
+Solution time complexity: O(n)
+Solution space complexity: O(1)
+*/
 class Solution {
   public:
     // Function to search x in arr
@@ -23,30 +31,28 @@ class Solution {
     }
 };
 
-//{ Driver Code Starts.
-
 int main() {
     int testcases;
     cin >> testcases;
-    cin.ignore(); // To ignore the newline character after reading testcases
+    cin.ignore();
     while (testcases--) {
         vector<int> arr;
         int x;
         string input;
 
-        getline(cin, input); // Read the entire line for the array elements
+        getline(cin, input); 
         stringstream ss(input);
         int number;
         while (ss >> number) {
             arr.push_back(number);
         }
 
-        getline(cin, input); // Read the next line for x
+        getline(cin, input);
         stringstream ss2(input);
         ss2 >> x;
 
         Solution ob;
-        cout << ob.search(arr, x) << endl; // Linear search
+        cout << ob.search(arr, x) << endl; 
         cout << '~' << endl;
     }
 
