@@ -37,7 +37,13 @@ void bubble_sort(vector<int> *array) {
 int main() {
     vector<int> arr = {5, 2, 12, 100, 23, 0, -12, 122};
 
-    selection_sort(&arr);
+    for (auto elem: arr) {
+        cout << elem << " ";
+    }
+
+    cout << endl;
+
+    bubble_sort(&arr);
 
     for (auto elem: arr) {
         cout << elem << " ";
