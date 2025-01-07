@@ -8,12 +8,37 @@ The subarrays must be returned in the following order:
 #include <vector>
 using namespace std;
 
+void subArray(vector<int> &arr, vector<vector<int>> *result) {
+    int length = arr.size();
 
+    for (int i = 0; i < length; i++) {
+
+        for (int j = i; j < length; j++) {
+            vector<int> v;
+
+            for (int k = i; k <= j; k++) {
+                v.push_back(arr[k]);
+            }
+
+            result->push_back(v);
+        }
+    }
+}
 
 
 int main() {
     vector<int> array = { 1, 2, 3 };
     vector<vector<int>> res;
+    
+    subArray(array, &res);
+
+    for (int i = 0; i < res.size(); i++) {
+        for (int j = 0; j < res[i].size(); j++) {
+            cout << res[i][j] << " ";
+        }
+
+        cout << endl;
+    }
 
     return 0;
 }

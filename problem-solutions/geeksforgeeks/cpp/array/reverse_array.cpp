@@ -20,3 +20,34 @@ void reverseArray(vector<int> &array) {
         array[index] = temporary_array[index];
     }
 }
+
+void reverseArray1(vector<int> &array) {
+    int length = array.size();
+    int i = 0; 
+    int j = length - 1;
+
+    while (i < j) {
+        swap(array.at(i), array.at(j));
+
+        i++;
+        j--;
+    }
+}
+
+int main() {
+    vector<int> v1 = {1, 2, 3, 4, 5};
+    vector<int> v2 = {1, 2, 3, 4, 5, 6};
+
+    reverseArray1(v1);
+    reverseArray1(v2);
+
+    for (int elem: v1) {
+        cout << elem << " ";
+    }
+
+    cout << endl;
+
+    for (int elem: v2) {
+        cout << elem << " ";
+    }
+}
