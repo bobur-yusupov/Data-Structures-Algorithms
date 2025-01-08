@@ -1,8 +1,8 @@
 /*
 Algorithm to rotate elements of a vector clockwise and counter clockwise
 
-Time complexity: 
-Space complexity: 
+Time complexity: O(d*n) and O(n)
+Space complexity: O(1)
 
 */
 
