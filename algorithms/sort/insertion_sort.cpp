@@ -37,11 +37,12 @@ void insertionsort(vector<int> *array) {
         int j = i - 1;
 
         while (j >= 0 && array->at(j) > key) {
-            array->at(j+1) = array->at(j);
-            j--;
+            array->at(j + 1) = array->at(j);
+            j = j - 1;
         }
 
         array->at(j + 1) = key;
+
     }
 }
 
