@@ -24,3 +24,24 @@ def is_palindrome(word: str) -> bool:
 # Check if each word is a palindrome and print the result
 print(is_palindrome(word=word1))  # Expected output: True, since "kayak" is a palindrome
 print(is_palindrome(word=word2))  # Expected output: False, since "light" is not a palindrome
+
+def twoSum(array: list, target: int) -> list:
+    left = 0;
+    right = len(array) - 1
+
+    while left < right:
+        if array[left] + array[right] == target:
+            return [array[left], array[right]]
+        
+        elif array[left] + array[right] < target:
+            left -= 1
+
+        elif array[left] + array[right] > target:
+            right -= 1
+        
+    return [-1]
+
+number_list = [1, 2, 3, 4, 5]
+target = 5
+
+print(twoSum(array=number_list, target=target))

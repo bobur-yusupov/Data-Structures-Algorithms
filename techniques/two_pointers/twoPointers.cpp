@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 
 bool isPalindrome(const std::string& word) {
     /*
@@ -31,7 +32,46 @@ bool isPalindrome(const std::string& word) {
     return true; // If no mismatches we can assume word is palindrome and return true
 }
 
+std::vector<std::vector<int>> twoSum(std::vector<int> &array, int target) {
+    int left = 0, right = array.size() - 1;
+
+    std::vector<std::vector<int>> ans;
+
+    while (left < right) {
+        int sum = array.at(left) + array.at(right);
+
+        if (sum == target) {
+            ans.push_back({ array.at(left), array.at(right) });
+            left++;
+            right--;
+        }
+        else if (sum < target) {
+            left ++;
+        }
+        else if (sum > target) {
+            right --;
+        }
+    }
+
+    if (ans.empty()) {
+        ans.push_back({-1});
+    }
+
+
+    return ans;
+}
+
 int main() {
+    std::vector<int> arr = { 0, 1, 2, 3, 4, 5 };
+    int target = 5;
+
+    std::vector<std::vector<int>> answer = twoSum(arr, target);
+
+    for (std::vector<int> pairs: answer) {
+        std::cout << pairs[0] << " " << pairs[1] << std::endl;
+    }
+
+    std::cout << std::endl;
 
     return 0;
 }
