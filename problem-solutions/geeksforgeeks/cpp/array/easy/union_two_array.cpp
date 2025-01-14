@@ -1,9 +1,9 @@
 /*
 
 Given two sorted arrays a[] and b[], where each array may contain duplicate elements ,
-the task is to return the elements in the intersection of the two arrays in sorted order.
+the task is to return the elements in the union of the two arrays in sorted order.
 
-Intersection of two arrays can be defined as the set containing distinct common elements that are present in both of the arrays.
+Union of two arrays can be defined as the set containing distinct common elements that are present in either of the arrays.
 
 */
 
@@ -29,6 +29,12 @@ vector<int> intersection(vector<int> &a, vector<int> &b)
             continue;
         }
 
+        if (j > 0 && b[j - 1] == b[j]) {
+            j++;
+
+            continue;
+        }
+
         if (a[i] == b[j])
         {
             result.push_back(a[i]);
@@ -39,10 +45,13 @@ vector<int> intersection(vector<int> &a, vector<int> &b)
 
         else if (a[i] < b[j])
         {
+            result.push_back(a[i]);
+
             i++;
         }
         else
         {
+            result.push_back(b[j]);
             j++;
         }
     }
