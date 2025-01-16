@@ -11,7 +11,7 @@
 ---
 
 ## Repository Overview
-In this repository, you'll find comprehensive lecture notes on Data Structures and Algorithms, gathered from a variety of sources, including university courses, textbooks, and online tutorials. The notes cover fundamental to advanced topics, starting from **Arrays** to **Graphs**. 
+In this repository, you'll find comprehensive lecture notes on Data Structures and Algorithms, gathered from a variety of sources, including university courses, textbooks, and online tutorials. The notes cover fundamental to advanced topics, starting from **Arrays** and **Strings** to **Graphs**. 
 
 ### Programming Languages
 The primary languages used in these notes are **Python** and **C++**, allowing for:
