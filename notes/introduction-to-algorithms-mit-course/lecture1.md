@@ -1,0 +1,56 @@
+# Lecture 1
+
+## What is an algorithm?
+
+Algorithm is a function, it takes an input and produces an output.
+
+\[
+f: \text{{input}} \rightarrow \text{{output}}
+\]
+
+Sample problem
+
+We need to find a person with the given birthday
+
+Inductive Hypotesis: if first k students cotain match algorithm returns a match before interviewing student k+1.
+
+Base case: k = 0
+
+Inductive step:
+
+- if k` contains a match -> already returned by inductive hypothesis
+- else k`+1 contains a match -> algorithm returns a match
+
+## Efficiency
+
+Not only how fast an algorithm is, but also how much faster it than other possible approaches.
+
+We use assymptotic analysis to compare algorithms.
+
+Here are the most common notations:
+
+\[
+O(n) - \text{{upper bound}} \\
+\Omega(n) - \text{{lower bound}} \\
+\Theta(n) - \text{{both}} \\
+\]
+
+Here are some notations with names:
+\[
+\Theta(1) - \text{{constant time}} \\
+\Theta(\log n) - \text{{logarithmic time}} \\
+\Theta(n) - \text{{linear time}} \\
+\Theta(n \log n) - \text{{linearithmic time}} \\
+\Theta(n^2) - \text{{quadratic time}} \\
+\Theta(n^c) - \text{{polynomial time}} \\
+\]
+
+## Model of computation
+
+Word-RAM model
+
+- memory = array of words (w-bit)
+- "array" = consequitive chunk of memory
+- => array[i] = memory[address(array) + i]
+
+Array access is constant time: \(\Theta(1)\)
