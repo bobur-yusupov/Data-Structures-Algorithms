@@ -24,7 +24,7 @@ Let's analyze asyptotic behavior of the function.
 ### Problem 1-1
 
 **Asymptotic behavior of functions**
-For each of the following sets of five functions, order them so that if f_a appears before f_b in your  sequence, then fa = O(fb). If fa = O(fb) and fb =  (fa) (meaning fa and fb could appear in either order), indicate this by enclosing fa and fb in a set with curly braces. For example, if the functions are: 
+For each of the following sets of five functions, order them so that if \(f_a\) appears before \(f_b\) in your  sequence, then \(f_a\) = O(\(f_b\)). If \(f_a\) = O(\(f_b\)) and \(f_b\) =  (\(f_a\)) (meaning fa and fb could appear in either order), indicate this by enclosing \(f_a\) and \(f_b\) in a set with curly braces. For example, if the functions are: 
 
 \[
 f_1=n, \quad f_2=\sqrt{n}, f_3=n+\sqrt{n}    
@@ -46,7 +46,7 @@ Here is other problem:
 
 Asymptotic behavior analysis of the first function:
 
-1. Here \(f_1=(log{n})^2019\) is not a logarithmic function but it is a polynomial function bevause \(log{n}\) gives us a number, let m, and the number should be raised to power *2019*. The worst case behavior of the function is \(O(log{n})^{2019}\).
+1. Here \(f_1=(log{n})^{2019}\) is not a logarithmic function but it is a polynomial function bevause \(log{n}\) gives us a number, let m, and the number should be raised to power *2019*. The worst case behavior of the function is \(O((log{n})^{2019})\).
 2. In the second problem we need to simplify logarithm based on its properties 
    \[
     log(n^{2019}) = 2019 * log(n)
@@ -57,3 +57,48 @@ for large n the constant term 2019 does not affect consequently behavior of the 
 O(n^2) * O(logn) = O(n * logn)    
 \]
 3. It is obvious that for the third function worst case is \(O(n^3)\)
+4. \(2.019^n\) this function is a exponential function. The base is higher than 1, it means it will grow faster than polynomial, linear and logarithmic funciton. 
+![Exponential Function](./images/2019-n-degree.png)
+Asymptotic behavior of function is \(O(2.019^n)\)
+5. The last function \(O(n*logn)\)
+
+![Analysis result](./images/analysis-functions.png)
+
+Result 
+\[
+    \{f_1, f_5, f_2, f_3, f_4\}
+\]
+
+In the exercise b we are given \(n!\) first we need to analyze its asymptotic behavior. We can use Stirling's approximation:
+
+\[
+    n! \approx \sqrt{2\pi n} (\frac{n}{e})^n
+\]
+
+As fraction with exponent n grows faster than \(\sqrt{2\pi n}\) therefore for large values of n it will be negligible. Therefore Big-O notation of the function is
+
+\[
+    O(\sqrt{n}(\frac{n}{e})^n)
+\]
+
+For the function
+
+\[
+    \frac{n!}{3!(n-3)!} = \frac{(n-2)(n-1)n}{6}
+\]
+
+when we open brakets the leading term will be \(n^3\) therefore Big-O notation is \(O(n^3)\)
+
+For the function \(\frac{n!}{\frac{n}{2}!(n-\frac{n}{2})!}\) we need to simplify the function. After subtracting \(\frac{n}{2}\) from \(n\) we will get \(\frac{n!}{(\frac{n}{2}!)^2}\). For further process we use Starling's approximation and get \(\frac{2^n}{\sqrt{\pi n}}\)
+
+When it comes to ordering the functions here is the result
+
+\[
+    \{\{n^3, \frac{n!}{3!(n-3)!}\}, \{ 2^n, \frac{n!}{\frac{n}{2}!(n-\frac{n}{2})!} \}, n! \}    
+\]
+
+or
+
+\[
+    \{ \{f_2, f_5\}, f_3, f_1, f_4 \}    
+\]
