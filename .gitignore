@@ -165,3 +165,61 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+
+# Latex ignore files
+*.aux
+*.lof
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+*.nav
+*.snm
+*.vrb
+*.dvi
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# Editor backup and swap files
+*~
+*.swp
+*.swo
+*.bak
+*.backup
+*.tmp
+
+# Logs
+*.log
+*.fdb_latexmk
+*.synctex.gz
+*.synctex
+*.xdv
+*.blx.bib
+
+# PDFs and other output files
+*.pdf
+*.ps
+*.eps
+
+# TeXShop specific
+*.synctex.gz(busy)
+*.pdfsync
+
+# Kile specific
+*.kilepr
+
+# VSCode specific
+.vscode/
+
+# Overleaf specific
+.auto/
+
+# Exceptional files
+!algorithms/optimization/prime_number/prime_numer_optimization.pdf
