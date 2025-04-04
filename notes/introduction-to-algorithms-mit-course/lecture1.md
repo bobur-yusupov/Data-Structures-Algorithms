@@ -23,6 +23,8 @@ Inductive step:
 
 ## Efficiency
 
+**Time complexity** - an amount of time that an algorithm takes to run as a function of the size of input.
+
 Not only how fast an algorithm is, but also how much faster it than other possible approaches.
 
 We use assymptotic analysis to compare algorithms.
@@ -32,7 +34,7 @@ Here are the most common notations:
 \[
 O(n) - \text{{upper bound}} \\
 \Omega(n) - \text{{lower bound}} \\
-\Theta(n) - \text{{both}} \\
+\Theta(n) - \text{{average case}} \\
 \]
 
 Here are some notations with names:
@@ -54,3 +56,15 @@ Word-RAM model
 - => array[i] = memory[address(array) + i]
 
 Array access is constant time: \(\Theta(1)\)
+
+## Constant time \(O(1)\)
+
+If an algorithm's execution time does not depend of the size of input then the time complexity of the algorithm is constant. For example taking an element from an array using index. To any index it executes same procedure.
+
+## Logarithmic time \(O(log{n})\)
+
+If time complexity of an algorithms grows logarithmically as the size of input grows this is called logarithmic time complexity. In most often cases it happens if the size of input reduces by half or by any constant factor, then it is called logarithmic time complexity.
+
+## Linear time \(O(n)\)
+
+If an algorithm's execution time increases linearly with the size of input.
