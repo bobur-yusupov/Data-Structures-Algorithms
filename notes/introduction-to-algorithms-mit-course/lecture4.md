@@ -1,6 +1,6 @@
 # Hashing
 
-Hash table is a data structure to store elements in very efficient way. It uses hashing function to find key for an element and assigns that element to the key.
+Hashing is a process of converting a data into a fixed-size **hash value** using **hash function**. Hash table is a data structure to store **key-value data** and uses hashing to map keys to a specific indices.
 
 ## Universal Hash Function
 
